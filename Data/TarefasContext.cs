@@ -1,12 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using ToDoList.Models;
 
 namespace ToDoList.Data;
 
-public class TarefasContext : DbContext
+public class TarefasContext : IdentityDbContext<Usuario>
 {
 
-	public TarefasContext(DbContextOptions<TarefasContext> options) : base(options)
+	public TarefasContext(DbContextOptions<TarefasContext> opts) : base(opts)
 	{
 		
 	}
